@@ -1,4 +1,4 @@
-//2186
+//leetcode 2186
 //You are given two strings s and t. In one step, you can append any character to either s or t.
 //
 //Return the minimum number of steps to make s and t anagrams of each other.
