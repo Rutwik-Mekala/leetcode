@@ -5,7 +5,7 @@ class TwoSum {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
-        for (int i : answer(nums, target)) {
+        for (int i : twopointerApproach(nums, target)) {
             System.out.print(i + " ");
         }
     }
@@ -29,6 +29,20 @@ class TwoSum {
                 return new int[]{prevMap.get(num), i};
             }
             prevMap.put(target - num, i);
+        }
+        return new int[]{};
+    }
+    //using binary search
+    public static int[] twopointerApproach(int[] nums, int x){
+        int i=0, j=nums.length-1;
+        while(i<j){
+            if(nums[i]+nums[j]==x){
+                return new int[]{i,j};
+            }else if(nums[i]+nums[j]<x){
+                i++;
+            }else{
+                j--;
+            }
         }
         return new int[]{};
     }
